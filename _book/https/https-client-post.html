@@ -1,0 +1,1033 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>https client post json · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="https-server-router.html" />
+    
+    
+    <link rel="prev" href="https-client-hard-code-tls.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../jinzhi.html">
+            
+                <a href="../jinzhi.html">
+            
+                    
+                    二进制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    GO基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../IO/IO.html">
+            
+                <a href="../IO/IO.html">
+            
+                    
+                    IO
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../IO/byte-Slice2-io.Reader.html">
+            
+                <a href="../IO/byte-Slice2-io.Reader.html">
+            
+                    
+                    []byte2io.Reader
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../OS/OS.html">
+            
+                <a href="../OS/OS.html">
+            
+                    
+                    OS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../OS/os-exec.html">
+            
+                <a href="../OS/os-exec.html">
+            
+                    
+                    exec
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../file/find.html">
+            
+                <a href="../file/find.html">
+            
+                    
+                    文件查找
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../basic/basic.html">
+            
+                <a href="../basic/basic.html">
+            
+                    
+                    数据基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../docker/docker.html">
+            
+                <a href="../docker/docker.html">
+            
+                    
+                    docker sdk
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../docker/go-mod.html">
+            
+                <a href="../docker/go-mod.html">
+            
+                    
+                    go mod
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../docker/connect-localhost.html">
+            
+                <a href="../docker/connect-localhost.html">
+            
+                    
+                    connect localhost
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../docker/tls-hard-code.html">
+            
+                <a href="../docker/tls-hard-code.html">
+            
+                    
+                    tls hard code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../docker/build-image.html">
+            
+                <a href="../docker/build-image.html">
+            
+                    
+                    build image use args
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../docker/container-create.html">
+            
+                <a href="../docker/container-create.html">
+            
+                    
+                    container create
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../docker/pull-image.html">
+            
+                <a href="../docker/pull-image.html">
+            
+                    
+                    pull image
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../docker/mount.html">
+            
+                <a href="../docker/mount.html">
+            
+                    
+                    mount args
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../k8s/k8s.html">
+            
+                <a href="../k8s/k8s.html">
+            
+                    
+                    k8s sdk
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../k8s/go-mod.html">
+            
+                <a href="../k8s/go-mod.html">
+            
+                    
+                    go mod
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../k8s/client_kubeconfig_hard_code.html">
+            
+                <a href="../k8s/client_kubeconfig_hard_code.html">
+            
+                    
+                    kubeconfig 硬编码 yaml 格式注意 set paste
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../ssh-client/ssh-client.html">
+            
+                <a href="../ssh-client/ssh-client.html">
+            
+                    
+                    ssh  client
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../ssh-client/ssh-client-stdout.html">
+            
+                <a href="../ssh-client/ssh-client-stdout.html">
+            
+                    
+                    输出到标准输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../ssh-client/ssh-client-stdout-str.html">
+            
+                <a href="../ssh-client/ssh-client-stdout-str.html">
+            
+                    
+                    输出到字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="https.html">
+            
+                <a href="https.html">
+            
+                    
+                    https 和证书
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="https-server-simple.html">
+            
+                <a href="https-server-simple.html">
+            
+                    
+                    一个简单的https 服务器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1.1" data-path="https-clinet-simple.html">
+            
+                <a href="https-clinet-simple.html">
+            
+                    
+                    https 客户端
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1.1.1" data-path="https-clinet-simple-no-ver.html">
+            
+                <a href="https-clinet-simple-no-ver.html">
+            
+                    
+                    https 客户端 忽略验证服务端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.1.2" data-path="https-clinet-simple-ver.html">
+            
+                <a href="https-clinet-simple-ver.html">
+            
+                    
+                    使用服务端的证书验证服务端
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.2" data-path="https-server-ca.html">
+            
+                <a href="https-server-ca.html">
+            
+                    
+                    服务端使用ca签发证书
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1.2.1" data-path="https-server-ca_ver_client.html">
+            
+                <a href="https-server-ca_ver_client.html">
+            
+                    
+                    服务端验证客户端证书
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.3" data-path="https-client-hard-code-tls.html">
+            
+                <a href="https-client-hard-code-tls.html">
+            
+                    
+                    客户端证书hard code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.10.1.4" data-path="https-client-post.html">
+            
+                <a href="https-client-post.html">
+            
+                    
+                    https client post json
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="https-server-router.html">
+            
+                <a href="https-server-router.html">
+            
+                    
+                    https 双向认证 路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../teshu.html">
+            
+                <a href="../teshu.html">
+            
+                    
+                    test
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../byte.html">
+            
+                <a href="../byte.html">
+            
+                    
+                    string byte
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../json/json.html">
+            
+                <a href="../json/json.html">
+            
+                    
+                    json
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../json/data2json.html">
+            
+                <a href="../json/data2json.html">
+            
+                    
+                    将数据转换为json
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1.1" data-path="../json/struct2json.html">
+            
+                <a href="../json/struct2json.html">
+            
+                    
+                    struct 2 json
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.1.2" data-path="../json/map2json.html">
+            
+                <a href="../json/map2json.html">
+            
+                    
+                    map 2 json
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.1.3" data-path="../json/string-map2json.html">
+            
+                <a href="../json/string-map2json.html">
+            
+                    
+                    (string key string vlaue map) 2 json
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.1.4" data-path="../json/slice2json.html">
+            
+                <a href="../json/slice2json.html">
+            
+                    
+                    slice 2 json
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.1.5" data-path="../json/slice-struct2json.html">
+            
+                <a href="../json/slice-struct2json.html">
+            
+                    
+                    序列化slice 元素是struct
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../unjson/unjson.html">
+            
+                <a href="../unjson/unjson.html">
+            
+                    
+                    反序列化json
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.2.1" data-path="../unjson/json2array.html">
+            
+                <a href="../unjson/json2array.html">
+            
+                    
+                    json2array
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../etcd/etcd.html">
+            
+                <a href="../etcd/etcd.html">
+            
+                    
+                    etcd
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../etcd/put.html">
+            
+                <a href="../etcd/put.html">
+            
+                    
+                    put
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../etcd/get.html">
+            
+                <a href="../etcd/get.html">
+            
+                    
+                    get 判断一个key是否存在
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >https client post json</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <pre><code>package main
+
+import (
+    &quot;crypto/tls&quot;
+    &quot;crypto/x509&quot;
+    &quot;fmt&quot;
+    &quot;io/ioutil&quot;
+    &quot;net/http&quot;
+    &quot;strings&quot;
+)
+
+func main() {
+    httppost()
+}
+
+func httppost() {
+    pool := x509.NewCertPool()
+    pool.AppendCertsFromPEM(caData)
+    cliCrt, err := tls.X509KeyPair(certPem, keyPem)
+
+    if err != nil {
+        fmt.Println(&quot;Loadx509keypair err:&quot;, err)
+        return
+    }
+
+    tr := &amp;http.Transport{
+        TLSClientConfig: &amp;tls.Config{
+            RootCAs:      pool,
+            Certificates: []tls.Certificate{cliCrt},
+        },
+    }
+
+    client := &amp;http.Client{Transport: tr}
+
+    //req.Header.Set(&quot;Content-Type&quot;, &quot;application/x-www-form-urlencoded&quot;)
+
+    data := `{&quot;user_name&quot;:&quot;yandun&quot;,&quot;pwd&quot;:&quot;123456&quot;}`
+    req, err := http.NewRequest(&quot;POST&quot;, &quot;https://192.168.3.3:8081/auth&quot;, strings.NewReader(data))
+    if err != nil {
+        fmt.Println(err)
+    }
+    req.Header.Set(&quot;Content-Type&quot;, &quot;application/x-www-form-urlencoded&quot;)
+
+    resp, err := client.Do(req)
+    if err != nil {
+        fmt.Println(err)
+    }
+    defer resp.Body.Close()
+    //post&#x6570;&#x636E;&#x5E76;&#x63A5;&#x6536;http&#x54CD;&#x5E94;
+
+    respBody, err := ioutil.ReadAll(resp.Body)
+    if err!=nil{
+
+    }else {
+        fmt.Printf(&quot;response data:%v\n&quot;, string(respBody))
+    }
+
+}
+
+var caData = []byte(`-----BEGIN CERTIFICATE-----
+MIIC/zCCAeegAwIBAgIJAKL+fvYeq6a9MA0GCSqGSIb3DQEBCwUAMBYxFDASBgNV
+BAMMC3RvbnliYWkuY29tMB4XDTIwMDUyOTEzMDMyNFoXDTM0MDIwNTEzMDMyNFow
+FjEUMBIGA1UEAwwLdG9ueWJhaS5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQCuIgtaFsE9hlc8/aqnRQ2c3xH9SphTKno+dSgoN0GbXakvVRCToRbc
+E15HtqlbtXqgnwpffC5OqePpG8S0wH6TufvA0k5MQ4W7/YLwJfoQgKkafzsYSz6U
+5deTn0+CxTeVvEUfi1TaGDWjf2gNhlxu35ESPC6kjErb1wdAHiJVDWWpSIRFAoYD
+mmjFXchjnsqHHzRG5J1/7XP9xuH8CPktt1Oiq7YBNUyl45zyEBWryCddZV+kycP9
+GkzSUHZNXNPHv6uNwlr5Cm4tLh6B/yAfSCGFcNVtPhcX28mqpgdyojr6WMIoHkDb
+FixTBTdGwJS339kuAouFgxI44RhkIcSfAgMBAAGjUDBOMB0GA1UdDgQWBBSbfKHS
+75POY4Myfxu+6y/swMEh5TAfBgNVHSMEGDAWgBSbfKHS75POY4Myfxu+6y/swMEh
+5TAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQAztRJ6G4eHwCDRDorg
+b6RhKPsgqBAmZuWESOt77MPtKlwBdxBclcmuIfmMQs7OBxN/qhkB1yql9yvcsOR4
+pn4dmwPRyi4T0sZBOhiIcIMd6E7Zsn620Gj+vsBRqpvTeu4W3briX+X70xICQnx4
+uEclS4pCo3wJGXz0mz7X27b6TDdaFsxTPi0QZxkno66NAQLO+PCplDTYFZVeDWeP
+yjlkuV0qc5Jjf71Tndq6ifPfYvkmchdL3Uj/0NwGJiSXE9DAmd0lzwP0bM9thJg+
+dFBXtlbq/p1q2TIRJgVXKnMLjyu8e6KDO9HgojdJLmylP+3XKxewa5UdW2Hd2wqY
+DqLb
+-----END CERTIFICATE-----`)
+
+var certPem = []byte(`-----BEGIN CERTIFICATE-----
+MIICxTCCAa2gAwIBAgIJALEGoUYJ94AXMA0GCSqGSIb3DQEBCwUAMBYxFDASBgNV
+BAMMC3RvbnliYWkuY29tMB4XDTIwMDUyOTEzMTQyNVoXDTM0MDIwNTEzMTQyNVow
+FTETMBEGA1UEAwwKdG9ueWJhaV9jbjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCC
+AQoCggEBANjq5z2d6iBeMsaP/AAZQM5LKiBwBkUu1dy2ej6C4NLKctUAT1QqgvTz
+PbfQMfcUUmhNcDxz142dqzwnr4eFxWO5S9rHUwulr9CqBDRIi2CByIjJnhVgSNq1
+7CWmTFTwygu82L4jH/Vjw2ZFcxMYRetCoU6Oc2nBnMlI9lr+DcHmkTsWCH3tIx31
+Zbb6Hz5U8xmEjhM5JB56xKLNKt6vD7P/qPNvAwzaLpEf/yyPcTEUaa1S8ZlAgJgu
+2RnrzTchDyNVfe9q5hx3STbmdfAv6qLu0hdw4GRRezfzi4gxu+Tmu9xPt/Oxz/XJ
+pv68MAfDE+uhnNOUSADkfmgAr392zzMCAwEAAaMXMBUwEwYDVR0lBAwwCgYIKwYB
+BQUHAwIwDQYJKoZIhvcNAQELBQADggEBAApVUZAC6/+PKqStMx7gWObZql2yW8oa
+fF9Pv74X2HUz/FFKl98vhcrPtRguni3qCdA8WkGU0SFi6QHLKBX+Qxa6eF3OU79e
+G+w+aDR+FSl8eiLc+CjzStlHcU2TdlPNSF+kLVnjYeuU54CXuE6NHgg0G3zQsdQE
+DKPU2RR32eGNajGvsljcylavYwKvLKKq70f+HeQO95ZB3yGj18tWojX5fQO9J3kC
+SYne3A0AjYX6fYMF0RB2s4VrZNd/7XeSUr4tEDXmmyaNeNapOxaM614s+9N6T0oB
+lj0AHA8ORyzUE0bdRWJEgUKg+n7lrAFngwpQ9DvhN2DNscZtw4weUWQ=
+-----END CERTIFICATE-----`)
+
+var keyPem = []byte(`-----BEGIN RSA PRIVATE KEY-----
+MIIEpAIBAAKCAQEA2OrnPZ3qIF4yxo/8ABlAzksqIHAGRS7V3LZ6PoLg0spy1QBP
+VCqC9PM9t9Ax9xRSaE1wPHPXjZ2rPCevh4XFY7lL2sdTC6Wv0KoENEiLYIHIiMme
+FWBI2rXsJaZMVPDKC7zYviMf9WPDZkVzExhF60KhTo5zacGcyUj2Wv4NweaROxYI
+fe0jHfVltvofPlTzGYSOEzkkHnrEos0q3q8Ps/+o828DDNoukR//LI9xMRRprVLx
+mUCAmC7ZGevNNyEPI1V972rmHHdJNuZ18C/qou7SF3DgZFF7N/OLiDG75Oa73E+3
+87HP9cmm/rwwB8MT66Gc05RIAOR+aACvf3bPMwIDAQABAoIBAE2hE4yLnSRkUcuZ
+79ehMf4iDDt7m+LadhL9AxaoBAmsBhiQedNnO2KqQmYsDhWcojlNrWMVGglGaeen
+VDwt9YxQ3gK33tKGQztr/QExDSBGkhvR+88unCQZgx+eOicT3VsCBJdXPrK1N1K8
+fAhTYYJmYBAbDtbEQXYPtIqv7QB8+JQzoYj4r6uC/6bYLFc1BL3AizSxHvNQ6qyS
+jVLNCw/b2XSV/Gct+JO25lMR97eTtUZDO+aCJhRHtf2yH4AVJ2kjTSDX0zAwvEyn
+kTqVOhoBQ9UuHuDxBDY4evXSwm/HPtnLKt+n3VJm7hNiMbkfeo5GGRPBgsgS3SXn
+PBjgqjECgYEA9y6corfZu/AqxxnvDi1wBreK1MxRoSI6sOPqusPX/i6bScnG4khH
+hfIJsQtjjz6yYoB/N/Ph6XKPh6FwaICmZKVmiQafDy1wdGhBnjKZUX2+z6rGW82C
+azEhXaCvsQrP+8dlDQwLKX9W6wl+msfPigtOgHoW+UjTKx24VLhZl00CgYEA4Kfm
+uZKIZ5drXN0BxqeHKgtAueWEbeonmxjVGdcCqhSyIzZ/tb6hjKOL0MKqkzug9Ful
+kymdaR/tUFHzbF91MTOSooWAz0VuNm/9msooSLA6wGfixeoijLS2AXoe/zuE/BpO
++BCYjyrN+m6RjQFqzJdiM8vqbfvrSMJ+/rg3wH8CgYEA9LRAfRZlh5kLwG/8KZzx
++rRZzLE5Xrv0PopkJuEbQ5gAQ9xt+DZ2GDS1Q4By36zCDKIJT+sxC1tOnIdGMS6r
+i5fzGlRjwzLI0XUlAOg2wGYsMIpwNRIOuu+4iGg7hpmdrTSI5ZG2uy5FbgnIPJLy
+80aeQLKda8ycwWJ6yeR3TUECgYAJWtR/u7tUXPjKiCVvyUAWnxtV4lnOXebCTZlq
+Fwr0XCJC1x0gS0zc116WFdUWhnAgXMSbSStV2k9+fbseMydlIhmkDN0dRG3fdHBi
+BrMAu93mby0BQsungkrl6tjplefmu424RLClnYmwOPR0o693z4H2WDJt3ASjJf41
+yyP/LwKBgQDiS6GRXSX59WkMxQREnpInH25RKLdowBh1lDI9ZsRVWEWGGkwJwhCA
+QMcNGD/Z6XTnk3w22u66N69dcefteAOC4425inNRcG5MM3s3F+xJ3i/RHu157zIj
+3RfPQhGacZLLy4EKBeL2FUH75T2Qzn3H32h3MaALPc6DCj9HjLRsqQ==
+-----END RSA PRIVATE KEY-----`)
+</code></pre>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="https-client-hard-code-tls.html" class="navigation navigation-prev " aria-label="Previous page: 客户端证书hard code">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="https-server-router.html" class="navigation navigation-next " aria-label="Next page: https 双向认证 路由">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"https client post json","level":"1.10.1.4","depth":3,"next":{"title":"https 双向认证 路由","level":"1.10.2","depth":2,"path":"https/https-server-router.md","ref":"https/https-server-router.md","articles":[]},"previous":{"title":"客户端证书hard code","level":"1.10.1.3","depth":3,"path":"https/https-client-hard-code-tls.md","ref":"https/https-client-hard-code-tls.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-search","-sharing","theme-default","-lunr","fontsettings","livereload","popup","splitter","-copy-code-button","highlight","-expandable-chapters-small","chapter-fold","back-to-top-button","search-pro","-expandable-chapters","mathjax","livereload"],"pluginsConfig":{"chapter-fold":{},"livereload":{},"splitter":{},"search-pro":{},"popup":{},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"back-to-top-button":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css"}},"file":{"path":"https/https-client-post.md","mtime":"2020-06-01T12:24:08.149Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-09T12:45:49.129Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="https://cdn.mathjax.org/mathjax/2.6-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mathjax/plugin.js"></script>
+        
+    
+
+    </body>
+</html>
+
