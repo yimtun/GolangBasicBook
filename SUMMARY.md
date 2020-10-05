@@ -46,3 +46,7 @@
 * [etcd](etcd/etcd.md)
     * [put](etcd/put.md)
     * [get 判断一个key是否存在](etcd/get.md)
+* [vim-go](vim/vim.md)
+    * [vim8 install](vim/vim8-install.md)
+        * [vim-plug vim-go](vim/vim-plug.md)
+    * [go install](go-install/go-install.md)

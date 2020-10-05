@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>map 2 json · GitBook</title>
+        <title>go install · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="string-map2json.html" />
     
-    
-    <link rel="prev" href="struct2json.html" />
+    <link rel="prev" href="../vim/vim-plug.html" />
     
 
     </head>
@@ -589,9 +587,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.13" data-path="json.html">
+        <li class="chapter " data-level="1.13" data-path="../json/json.html">
             
-                <a href="json.html">
+                <a href="../json/json.html">
             
                     
                     json
@@ -603,9 +601,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.13.1" data-path="data2json.html">
+        <li class="chapter " data-level="1.13.1" data-path="../json/data2json.html">
             
-                <a href="data2json.html">
+                <a href="../json/data2json.html">
             
                     
                     将数据转换为json
@@ -617,9 +615,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.13.1.1" data-path="struct2json.html">
+        <li class="chapter " data-level="1.13.1.1" data-path="../json/struct2json.html">
             
-                <a href="struct2json.html">
+                <a href="../json/struct2json.html">
             
                     
                     struct 2 json
@@ -630,9 +628,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.13.1.2" data-path="map2json.html">
+        <li class="chapter " data-level="1.13.1.2" data-path="../json/map2json.html">
             
-                <a href="map2json.html">
+                <a href="../json/map2json.html">
             
                     
                     map 2 json
@@ -643,9 +641,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.13.1.3" data-path="string-map2json.html">
+        <li class="chapter " data-level="1.13.1.3" data-path="../json/string-map2json.html">
             
-                <a href="string-map2json.html">
+                <a href="../json/string-map2json.html">
             
                     
                     (string key string vlaue map) 2 json
@@ -656,9 +654,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.13.1.4" data-path="slice2json.html">
+        <li class="chapter " data-level="1.13.1.4" data-path="../json/slice2json.html">
             
-                <a href="slice2json.html">
+                <a href="../json/slice2json.html">
             
                     
                     slice 2 json
@@ -669,9 +667,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.13.1.5" data-path="slice-struct2json.html">
+        <li class="chapter " data-level="1.13.1.5" data-path="../json/slice-struct2json.html">
             
-                <a href="slice-struct2json.html">
+                <a href="../json/slice-struct2json.html">
             
                     
                     序列化slice 元素是struct
@@ -815,9 +813,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.15.2" data-path="../go-install/go-install.html">
+        <li class="chapter active" data-level="1.15.2" data-path="go-install.html">
             
-                <a href="../go-install/go-install.html">
+                <a href="go-install.html">
             
                     
                     go install
@@ -863,7 +861,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >map 2 json</a>
+        <a href=".." >go install</a>
     </h1>
 </div>
 
@@ -878,52 +876,18 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <pre><code>package main
-
-import (
-    &quot;encoding/json&quot;
-    &quot;fmt&quot;
-)
-
-type Monster struct {
-    Name     string
-    Age      int
-    Birthday string
-    Sal      float64
-    Skill    string
-    Names    []string
-}
-
-// map&#x5E8F;&#x5217;&#x5316;
-func testMap() {
-    //&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;map
-    var a map[string]interface{}
-    //&#x4F7F;&#x7528;map&#x4E4B;&#x524D; &#x5FC5;&#x987B;make&#x4E00;&#x4E0B;
-    a = make(map[string]interface{})
-    a[&quot;name&quot;] = &quot;&#x7EA2;&#x5B69;&#x513F;&quot;
-    a[&quot;age&quot;] = 18
-    a[&quot;address&quot;] = &quot;&#x91CD;&#x5E86;&#x6D2A;&#x5D16;&#x6D1E;&quot;
-    a[&quot;struct&quot;] = Monster{
-        Name:     &quot;&#x725B;&#x9B54;&#x738B;&quot;,
-        Age:      500,
-        Birthday: &quot;2019-10-27&quot;,
-        Sal:      10000.01,
-        Skill:    &quot;&#x725B;&#x9B54;&#x62F3;&quot;,
-        Names:    []string{&quot;xxx&quot;, &quot;ddd&quot;},
-    }
-    // &#x5C06;a map&#x7ED3;&#x6784;&#x4F53;&#x5E8F;&#x5217;&#x5316;
-    data, err := json.Marshal(a)
-    if err != nil {
-        fmt.Printf(&quot;&#x5E8F;&#x5217;&#x5316;&#x9519;&#x8BEF; err is %v&quot;, err)
-    }
-    //&#x8F93;&#x51FA;&#x5E8F;&#x5217;&#x5316;&#x7ED3;&#x679C;
-    fmt.Printf(&quot;map&#x5E8F;&#x5217;&#x5316;&#x540E; = %v&quot;, string(data))
-}
-
-func main() {
-    //&#x7ED3;&#x6784;&#x4F53;&#xFF0C; map, slice&#x8FDB;&#x884C;&#x5E8F;&#x5217;&#x5316;
-    testMap()
-}
+                                <p>go 1.14.2</p>
+<pre><code>export GOROOT=/usr/local/go
+export GOPATH=/gopath
+export GOBIN=$GOROOT/bin/
+export GOTOOLS=$GOROOT/pkg/tool/
+export PATH=$PATH:$GOBIN:$GOTOOLS
+export GO111MODULE=on
+</code></pre><pre><code>mkidr /gopath/
+</code></pre><pre><code>go  version
+</code></pre><pre><code>go version go1.14.2 linux/amd64
+</code></pre><p>test</p>
+<pre><code>git clone https://github.com/yimtun/CloudLink.git  /opt/CloudLink
 </code></pre>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -952,14 +916,10 @@ func main() {
 
             
                 
-                <a href="struct2json.html" class="navigation navigation-prev " aria-label="Previous page: struct 2 json">
+                <a href="../vim/vim-plug.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: vim-plug vim-go">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="string-map2json.html" class="navigation navigation-next " aria-label="Next page: (string key string vlaue map) 2 json">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -968,7 +928,7 @@ func main() {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"map 2 json","level":"1.13.1.2","depth":3,"next":{"title":"(string key string vlaue map) 2 json","level":"1.13.1.3","depth":3,"path":"json/string-map2json.md","ref":"json/string-map2json.md","articles":[]},"previous":{"title":"struct 2 json","level":"1.13.1.1","depth":3,"path":"json/struct2json.md","ref":"json/struct2json.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-search","-sharing","theme-default","-lunr","fontsettings","livereload","popup","splitter","-copy-code-button","highlight","-expandable-chapters-small","chapter-fold","back-to-top-button","search-pro","-expandable-chapters","mathjax","livereload"],"pluginsConfig":{"chapter-fold":{},"livereload":{},"splitter":{},"search-pro":{},"popup":{},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"back-to-top-button":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css"}},"file":{"path":"json/map2json.md","mtime":"2020-06-22T01:59:00.470Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-22T02:34:22.754Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"go install","level":"1.15.2","depth":2,"previous":{"title":"vim-plug vim-go","level":"1.15.1.1","depth":3,"path":"vim/vim-plug.md","ref":"vim/vim-plug.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-search","-sharing","theme-default","-lunr","fontsettings","livereload","popup","splitter","-copy-code-button","highlight","-expandable-chapters-small","chapter-fold","back-to-top-button","search-pro","-expandable-chapters","mathjax","livereload"],"pluginsConfig":{"chapter-fold":{},"livereload":{},"splitter":{},"search-pro":{},"popup":{},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"back-to-top-button":{},"mathjax":{"forceSVG":false,"version":"2.6-latest"},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css"}},"file":{"path":"go-install/go-install.md","mtime":"2020-06-22T02:36:13.757Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-22T02:34:22.754Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
