@@ -14,7 +14,7 @@ export GOPROXY=https://goproxy.io,direct
 
 
 ```
-mkidr /gopath/
+mkdir /gopath/
 ```
 
 ```
