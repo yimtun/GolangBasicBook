@@ -13,6 +13,12 @@ export GOPROXY=https://goproxy.io,direct
 ```
 
 
+
+```
+source  /etc/profile
+```
+
+
 ```
 mkdir /gopath/
 ```
